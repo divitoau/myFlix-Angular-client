@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { FetchApiDataService } from '../fetch-api-data.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-form',
@@ -15,7 +16,8 @@ export class LoginFormComponent implements OnInit {
   constructor(
     public fetchApiData: FetchApiDataService,
     public dialogRef: MatDialogRef<LoginFormComponent>,
-    public snackBar: MatSnackBar) { }
+    public snackBar: MatSnackBar,
+    public router: Router) { }
 
   ngOnInit(): void { }
 
@@ -24,7 +26,8 @@ export class LoginFormComponent implements OnInit {
       // logic for successful login goes here
       localStorage.setItem("user", JSON.stringify(response.user));
       localStorage.setItem("token", response.token);
-
+      this.router.navigate(['movies'])
+      
       this.dialogRef.close();
       console.log(response);
       this.snackBar.open(response.user.Username + ' logged in', 'OK', {
