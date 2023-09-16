@@ -6,4 +6,12 @@
     <p>Email: {{ user.Email }}</p>
     <p>Birthday: {{ user.Birthday | date }}</p>
   </div>
+  <button
+    mat-raised-button
+    (click)="openUpdateUserDialog()"
+    style="margin-right: 10px"
+    color="primary"
+  >
+    Update Info
+  </button>
 </div>

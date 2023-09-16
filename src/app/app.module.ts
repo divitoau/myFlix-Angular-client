@@ -23,6 +23,7 @@ import { MovieCardComponent } from './movie-card/movie-card.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { HeaderComponent } from './header/header.component';
 import { ProfileViewComponent } from './profile-view/profile-view.component';
+import { UpdateInfoComponent } from './update-info/update-info.component';
 
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
@@ -39,7 +40,8 @@ const appRoutes: Routes = [
     MovieCardComponent,
     WelcomePageComponent,
     HeaderComponent,
-    ProfileViewComponent
+    ProfileViewComponent,
+    UpdateInfoComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

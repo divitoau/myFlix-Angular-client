@@ -9,13 +9,12 @@ import { LoginFormComponent } from '../login-form/login-form.component';
   templateUrl: './welcome-page.component.html',
   styleUrls: ['./welcome-page.component.scss']
 })
+  
 export class WelcomePageComponent implements OnInit {
 
   constructor(public dialog: MatDialog) { }
 
-  ngOnInit(): void {
-    
-  }
+  ngOnInit(): void { }
 
   openUserRegistrationDialog(): void {
     this.dialog.open(UserRegistrationFormComponent, {

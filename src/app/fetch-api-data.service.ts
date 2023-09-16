@@ -100,7 +100,7 @@ export class FetchApiDataService {
     );
   }
 
-  editUserInfo(newUserDetails: any): Observable<any> {
+  updateUserInfo(newUserDetails: any): Observable<any> {
     const token = localStorage.getItem('token');
     const user = JSON.parse(localStorage.getItem('user') || '{}');
     return this.http.put(apiUrl + 'users/' + user.Username, newUserDetails, {
