@@ -8,7 +8,7 @@ import { UpdateInfoComponent } from '../update-info/update-info.component';
   templateUrl: './profile-view.component.html',
   styleUrls: ['./profile-view.component.scss']
 })
-  
+
 export class ProfileViewComponent implements OnInit {
 
   user: any
@@ -16,6 +16,10 @@ export class ProfileViewComponent implements OnInit {
   constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
+    this.getUser()
+  }
+
+  getUser(): void {
     let userString: any = localStorage.getItem("user")
     this.user = JSON.parse(userString)
   }

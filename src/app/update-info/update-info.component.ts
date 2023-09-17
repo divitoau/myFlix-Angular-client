@@ -4,13 +4,12 @@ import { MatDialogRef } from '@angular/material/dialog';
 
 import { FetchApiDataService } from '../fetch-api-data.service';
 
-
 @Component({
   selector: 'app-update-info',
   templateUrl: './update-info.component.html',
   styleUrls: ['./update-info.component.scss']
 })
-  
+
 export class UpdateInfoComponent {
 
   @Input() userData = { Username: '', Password: '', Email: '', Birthday: '' };
