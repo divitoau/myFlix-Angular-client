@@ -24,6 +24,7 @@ import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { HeaderComponent } from './header/header.component';
 import { ProfileViewComponent } from './profile-view/profile-view.component';
 import { UpdateInfoComponent } from './update-info/update-info.component';
+import { FavoriteMoviesComponent } from './favorite-movies/favorite-movies.component';
 
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
@@ -41,7 +42,8 @@ const appRoutes: Routes = [
     WelcomePageComponent,
     HeaderComponent,
     ProfileViewComponent,
-    UpdateInfoComponent
+    UpdateInfoComponent,
+    FavoriteMoviesComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
