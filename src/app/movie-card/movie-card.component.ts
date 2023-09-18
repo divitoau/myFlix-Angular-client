@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 
 import { FetchApiDataService } from '../fetch-api-data.service';
-import { SynopsisDialogComponent } from '../synopsis-dialog/synopsis-dialog.component';
+import { InfoDialogComponent } from '../info-dialog/info-dialog.component';
 
 @Component({
   selector: 'app-movie-card',
@@ -30,8 +30,8 @@ export class MovieCardComponent implements OnInit {
     });
   }
 
-  openSynopsisDialog(header: any, content: any): void {
-    this.dialog.open(SynopsisDialogComponent, {
+  openInfoDialog(header: any, content: any): void {
+    this.dialog.open(InfoDialogComponent, {
       data: {
         header: header,
         content: content
