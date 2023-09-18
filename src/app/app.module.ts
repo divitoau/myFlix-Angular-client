@@ -26,6 +26,7 @@ import { ProfileViewComponent } from './profile-view/profile-view.component';
 import { UpdateInfoComponent } from './update-info/update-info.component';
 import { FavoriteMoviesComponent } from './favorite-movies/favorite-movies.component';
 import { DeleteUserBoxComponent } from './delete-user-box/delete-user-box.component';
+import { SynopsisDialogComponent } from './synopsis-dialog/synopsis-dialog.component';
 
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
@@ -45,7 +46,8 @@ const appRoutes: Routes = [
     ProfileViewComponent,
     UpdateInfoComponent,
     FavoriteMoviesComponent,
-    DeleteUserBoxComponent
+    DeleteUserBoxComponent,
+    SynopsisDialogComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
