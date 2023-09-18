@@ -13,6 +13,7 @@ import { InfoDialogComponent } from '../info-dialog/info-dialog.component';
 export class MovieCardComponent implements OnInit {
 
   movies: any[] = []
+  userFavIDs: any[] = []
 
   constructor(
     public dialog: MatDialog,
@@ -21,6 +22,12 @@ export class MovieCardComponent implements OnInit {
 
   ngOnInit(): void {
     this.getMovies();
+    this.getUserFavIDs();
+  }
+
+  getUserFavIDs(): void {
+    let userString: any = localStorage.getItem("user")
+    this.userFavIDs = JSON.parse(userString).FavoriteMovies
   }
 
   getMovies(): void {
@@ -37,6 +44,26 @@ export class MovieCardComponent implements OnInit {
         content: content
       },
       width: '280px'
+    });
+  }
+
+  addToFavorites(movieID: string): void {
+    this.fetchApiData.addFavoriteMovie(movieID).subscribe((response) => {
+      console.log(response);
+      localStorage.setItem("user", JSON.stringify(response));
+      this.userFavIDs = response.FavoriteMovies
+    }, (response) => {
+      console.log(response);
+    });
+  }
+
+  removeFromFavorites(movieID: string): void {
+    this.fetchApiData.removeFavoriteMovie(movieID).subscribe((response) => {
+      console.log(response);
+      localStorage.setItem("user", JSON.stringify(response));
+      this.userFavIDs = response.FavoriteMovies
+    }, (response) => {
+      console.log(response);
     });
   }
 }

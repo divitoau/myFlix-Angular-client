@@ -34,7 +34,12 @@
       >
         Synopsis
       </button>
-      <mat-icon>favorite_border</mat-icon>
+      <div *ngIf="userFavIDs.includes(movie._id); else elseBlock">
+        <mat-icon (click)="removeFromFavorites(movie._id)">favorite</mat-icon>
+      </div>
+      <ng-template #elseBlock>
+        <mat-icon (click)="addToFavorites(movie._id)">favorite_border</mat-icon>
+      </ng-template>
     </mat-card-actions>
   </mat-card>
 </div>
