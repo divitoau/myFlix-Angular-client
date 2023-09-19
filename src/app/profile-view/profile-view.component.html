@@ -1,5 +1,13 @@
-<app-header></app-header>
-<div>
+<app-header
+  style="position: fixed; top: 0px; z-index: 10; width: 100%"
+></app-header>
+<div
+  style="position: fixed; top: 0px; height: 100%; width: 100%; z-index: -1"
+  [ngStyle]="{
+    'background-image': 'url(../../assets/img/film-background.jpg)',
+  }"
+></div>
+<div style="padding-top: 70px">
   <div>
     <h1>Profile</h1>
     <p>Username: {{ user.Username }}</p>
@@ -9,16 +17,14 @@
   <button
     mat-raised-button
     (click)="openUpdateUserDialog()"
-    style="margin-right: 10px"
-    color="primary"
+    style="margin-right: 10px; background-color: #c2c79e"
   >
     Update Info
   </button>
   <button
     mat-raised-button
     (click)="openDeleteUser()"
-    style="margin-right: 10px"
-    color="primary"
+    style="margin-right: 10px; background-color: #c2c79e"
   >
     Remove Account
   </button>
