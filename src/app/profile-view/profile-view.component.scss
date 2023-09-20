@@ -1,0 +1,24 @@
+.header {
+  position: fixed;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+}
+
+.bg-image {
+  position: fixed;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.profile-div {
+  padding-top: 60px;
+  padding-left: 1rem;
+}
+
+.profile-div .button {
+  margin-right: 10px;
+  background-color: #c2c79e;
+}

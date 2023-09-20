@@ -1,15 +1,15 @@
-<mat-card>
+<mat-card class="card">
   <mat-card-header>
-    <mat-card-title>Are you sure?</mat-card-title>
+    <mat-card-title class="card-title">Are you sure?</mat-card-title>
   </mat-card-header>
   <mat-card-content>
     Account will be permanently deleted, never to be seen again.
   </mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button (click)="deleteUser()" style="background-color: #C2C79E">
+    <button mat-raised-button (click)="deleteUser()" class="button">
       Permanently remove account
     </button>
-    <button mat-raised-button (click)="closeDialog()" style="background-color: #C2C79E">
+    <button mat-raised-button (click)="closeDialog()" class="button">
       I changed my mind
     </button>
   </mat-card-actions>

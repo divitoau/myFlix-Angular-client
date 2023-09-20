@@ -1,0 +1,26 @@
+.bg-image {
+  position: fixed;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.button {
+  background-color: #c2c79e;
+  margin-right: 10px;
+}
+
+.main-page {
+    text-align: center; padding-top: 35vh
+}
+
+.welcome-container {
+  background-color: #f3f7dd;
+  height: 150px;
+  width: 20em;
+  border: 2px solid #c2c79e;
+  border-radius: 10px;
+  padding-top: 4px;
+  margin: auto;
+}

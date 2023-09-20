@@ -1,0 +1,50 @@
+.header {
+  position: fixed;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+}
+.bg-image {
+  position: fixed;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.movie-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 76px;
+}
+
+.movie-card {
+  margin: 14px;
+  max-width: 362px;
+  background-color: #c2c79e;
+}
+
+.movie-card__title {
+  height: 38px;
+}
+
+.movie-card__subtitle {
+  margin-bottom: 12px;
+}
+
+.movie-poster {
+  width: 350px;
+  aspect-ratio: 7/10;
+  margin: 6px;
+  border-radius: 6px;
+}
+
+.button {
+  background-color: #c2c79e;
+  margin-right: 10px;
+}
+
+.fav-icon {
+  cursor: pointer;
+}

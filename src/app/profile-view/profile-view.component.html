@@ -1,31 +1,21 @@
-<app-header
-  style="position: fixed; top: 0px; z-index: 10; width: 100%"
-></app-header>
+<app-header class="header"></app-header>
 <div
-  style="position: fixed; top: 0px; height: 100%; width: 100%; z-index: -1"
+  class="bg-image"
   [ngStyle]="{
     'background-image': 'url(../../assets/img/film-background.jpg)',
   }"
 ></div>
-<div style="padding-top: 70px">
+<div class="profile-div">
   <div>
     <h1>Profile</h1>
     <p>Username: {{ user.Username }}</p>
     <p>Email: {{ user.Email }}</p>
     <p>Birthday: {{ user.Birthday | date }}</p>
   </div>
-  <button
-    mat-raised-button
-    (click)="openUpdateUserDialog()"
-    style="margin-right: 10px; background-color: #c2c79e"
-  >
+  <button mat-raised-button (click)="openUpdateUserDialog()" class="button">
     Update Info
   </button>
-  <button
-    mat-raised-button
-    (click)="openDeleteUser()"
-    style="margin-right: 10px; background-color: #c2c79e"
-  >
+  <button mat-raised-button (click)="openDeleteUser()" class="button">
     Remove Account
   </button>
   <h2>Favorite Movies</h2>
