@@ -42,7 +42,7 @@
       >
         Synopsis
       </button>
-      <div *ngIf="userFavIDs.includes(movie._id); else elseBlock">
+      <div *ngIf="userFavIDs?.includes(movie._id); else elseBlock">
         <mat-icon class="fav-icon" (click)="removeFromFavorites(movie._id)"
           >favorite</mat-icon
         >

@@ -26,7 +26,7 @@ export class DeleteUserBoxComponent {
       localStorage.removeItem("token")
       this.router.navigate(['welcome'])
       this.dialogRef.close();
-      this.snackBar.open(this.user.Username + "'s account has been deleted", 'OK', {
+      this.snackBar.open(this.user.Username + "Account deleted", 'OK', {
         duration: 2000
       });
     }, () => {
