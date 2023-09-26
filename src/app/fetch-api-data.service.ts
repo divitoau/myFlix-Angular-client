@@ -110,17 +110,16 @@ export class FetchApiDataService {
     );
   }
 
-  addFavoriteMovie(movieId: string): Promise<any> {
+  addFavoriteMovie(movieId: string): Observable<any> {
     const token = localStorage.getItem('token');
     const user = JSON.parse(localStorage.getItem('user') || '{}');
-    return fetch(apiUrl + 'users/' + user.Username + '/movies/' + movieId, {
-      method: 'post',
-      headers: { Authorization: 'Bearer ' + token }
-    }).then(r => {
-      console.log(r)
-      return r.json()
-    }).catch(this.handleError)
- 
+    return this.http.post(apiUrl + 'users/' + user.Username + '/movies/' + movieId, null, {
+      headers: new HttpHeaders({
+        Authorization: 'Bearer ' + token,
+      })
+    }).pipe(
+      catchError(this.handleError)
+    );
   }
 
   removeFavoriteMovie(movieId: string): Observable<any> {
