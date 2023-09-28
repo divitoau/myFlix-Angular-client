@@ -20,6 +20,9 @@ export class DeleteUserBoxComponent {
     public fetchApiData: FetchApiDataService,
     public dialogRef: MatDialogRef<DeleteUserBoxComponent>) { }
 
+  /**
+   * Makes an API call to delete user, then removes user and token from local storage and navigatese back to welcome screen
+   */
   deleteUser(): void {
     this.fetchApiData.deleteUser().subscribe(() => {
       localStorage.removeItem("user")

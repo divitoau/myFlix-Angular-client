@@ -20,6 +20,9 @@ export class ProfileViewComponent implements OnInit {
     this.getUser()
   }
 
+  /**
+   * Gets user object from local storage to populate on screen data
+   */
   getUser(): void {
     let userString: any = localStorage.getItem("user")
     this.user = JSON.parse(userString)

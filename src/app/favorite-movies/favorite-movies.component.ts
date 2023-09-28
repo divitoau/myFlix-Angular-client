@@ -23,6 +23,9 @@ export class FavoriteMoviesComponent implements OnInit {
     this.getFavMovies();
   }
 
+  /**
+ * Gets user object from local storage to determine which movies are currently favorited
+ */
   getFavMovies(): void {
     let userString: any = localStorage.getItem("user")
     this.userFavIDs = JSON.parse(userString).FavoriteMovies

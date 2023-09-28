@@ -23,6 +23,9 @@ export class LoginFormComponent implements OnInit {
 
   ngOnInit(): void { }
 
+  /**
+   * Performs API call to login, then locally stores user data and authorization token
+   */
   loginUser(): void {
     this.fetchApiData.userLogin(this.userData).subscribe((response) => {
       // logic for successful login goes here

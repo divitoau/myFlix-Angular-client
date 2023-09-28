@@ -25,11 +25,17 @@ export class MovieCardComponent implements OnInit {
     this.getUserFavIDs();
   }
 
+  /**
+   * Gets user object from local storage to determine which movies are currently favorited
+   */
   getUserFavIDs(): void {
     let userString: any = localStorage.getItem("user")
     this.userFavIDs = JSON.parse(userString).FavoriteMovies
   }
 
+  /**
+   * Gets an array of all movies from API
+   */
   getMovies(): void {
     this.fetchApiData.getAllMovies().subscribe((resp: any) => {
       this.movies = resp;
